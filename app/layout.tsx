@@ -20,7 +20,7 @@ export default function RootLayout({
 		<html lang='en'>
 			<body className={kumbh_sans.className}>
 				<ThemeProvider enableSystem={true} attribute='class'>
-					<div className='bg-lightGrey transition-all duration-500 dark:bg-midnight'>
+					<div className='bg-lightGrey transition-all duration-500 dark:bg-midnight min-h-screen'>
 						{children}
 					</div>
 				</ThemeProvider>
