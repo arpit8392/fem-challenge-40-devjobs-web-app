@@ -2,11 +2,13 @@ import Image from 'next/image'
 import { CSSProperties } from 'react'
 
 type Props = {
-	logo: string
-	company: string
-	logoBackground?: string
+	data: {
+		logo: string
+		company: string
+		logoBackground?: string
+	}
 }
-const CompanyLogo = ({ logo, company, logoBackground }: Props) => {
+const CompanyLogo = ({ data: { logo, company, logoBackground } }: Props) => {
 	return (
 		<div
 			className='relative h-[50px] w-[50px] overflow-hidden rounded-2xl'

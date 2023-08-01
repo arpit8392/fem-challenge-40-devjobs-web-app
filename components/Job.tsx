@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import CompanyLogo from './CompanyLogo'
+import ContractMetaData from './ContractMetaData'
 
 const Job = ({
 	id,
@@ -15,15 +16,11 @@ const Job = ({
 	return (
 		<article className='relative rounded-md bg-white pb-9 pl-8 pr-2 pt-12 dark:bg-veryDarkBlue'>
 			<div className='absolute -top-6'>
-				<CompanyLogo logo={logo} company={company} logoBackground={logoBackground} />
+				<CompanyLogo data={{ logo, company, logoBackground }} />
 			</div>
 			<Link href={`/job/${id}`} className='flex flex-col gap-11'>
 				<div className='flex flex-col gap-3 md:gap-4'>
-					<p className='flex items-center gap-3 text-darkGrey'>
-						{postedAt}
-						<span className='h-1 w-1 rounded-full bg-darkGrey'></span>
-						{contract}
-					</p>
+					<ContractMetaData data={{ postedAt, contract }} />
 					<p className='text-xl font-bold text-veryDarkBlue dark:text-white'>
 						{position}
 					</p>

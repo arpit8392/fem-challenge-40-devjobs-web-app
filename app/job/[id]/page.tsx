@@ -12,6 +12,7 @@ type Props = {
 
 const fetchJobFromID = (id: string) => {
 	const job = jobData.find((item) => item.id === Number(id))
+	if (!job) return
 	return job
 }
 
