@@ -28,7 +28,7 @@ const JobDetails = ({ data }: Props) => {
 
 	return (
 		<div className='flex flex-col gap-6 md:gap-8'>
-			<section className='relative mx-6 -mt-4 flex flex-col items-center rounded-md bg-white pb-8 pt-12 dark:bg-veryDarkBlue md:mx-10 md:-mt-8 md:flex-row md:overflow-hidden md:py-0'>
+			<section className='relative mx-6 -mt-4 flex flex-col items-center rounded-md bg-white pb-8 pt-12 dark:bg-veryDarkBlue md:mx-10 md:-mt-8 md:flex-row md:overflow-hidden md:py-0 lg:mx-[355px]'>
 				<div className='absolute -top-6 md:hidden'>
 					<CompanyLogo data={{ logo, company, logoBackground }} />
 				</div>
@@ -42,7 +42,7 @@ const JobDetails = ({ data }: Props) => {
 						className='object-contain px-8'
 					/>
 				</div>
-				<div className='flex flex-col items-center gap-6 md:w-full md:flex-row md:justify-between md:px-10 '>
+				<div className='flex flex-col items-center gap-6 md:w-full md:flex-row md:justify-between md:px-10'>
 					<div className='flex flex-col items-center gap-3 md:items-start '>
 						<h1 className='text-xl font-bold text-veryDarkBlue dark:text-white md:text-2xl'>
 							{company}
@@ -57,7 +57,7 @@ const JobDetails = ({ data }: Props) => {
 					</Link>
 				</div>
 			</section>
-			<section className='mx-6 flex flex-col gap-10 rounded-md bg-white px-6 py-10 dark:bg-veryDarkBlue md:mx-10 md:p-12'>
+			<section className='mx-6 flex flex-col gap-10 rounded-md bg-white px-6 py-10 dark:bg-veryDarkBlue md:mx-10 md:p-12 lg:mx-[355px]'>
 				<div className='flex flex-col gap-14 md:flex-row md:items-center md:justify-between '>
 					<div className='flex flex-col gap-2 md:gap-3'>
 						<ContractMetaData data={{ contract, postedAt }} />
@@ -77,7 +77,7 @@ const JobDetails = ({ data }: Props) => {
 				<Requirements data={{ requirements }} />
 				<Role data={{ role }} />
 			</section>
-			<footer className='mt-16 flex justify-center rounded-md bg-white p-6 dark:bg-veryDarkBlue md:items-center md:justify-between md:px-10'>
+			<footer className='mt-16 flex justify-center rounded-md bg-white p-6 dark:bg-veryDarkBlue md:items-center md:justify-between md:px-10 lg:px-[355px]'>
 				<div className='hidden flex-col gap-3 md:flex'>
 					<h4 className='text-xl font-bold text-veryDarkBlue dark:text-white'>
 						{position}
