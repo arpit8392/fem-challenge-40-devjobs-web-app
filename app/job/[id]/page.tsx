@@ -1,4 +1,3 @@
-import Header from '@/components/Header'
 import JobDetails from '@/components/JobDetails'
 import jobData from '@/data.json'
 
@@ -21,7 +20,6 @@ const JobPage = ({ params: { id } }: Props) => {
 
 	return (
 		<main>
-			<Header />
 			<JobDetails data={job} />
 		</main>
 	)

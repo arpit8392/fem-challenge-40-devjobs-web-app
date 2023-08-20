@@ -1,8 +1,9 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Kumbh_Sans } from 'next/font/google'
+import Header from '@/components/Header'
 import ThemeProvider from '@/components/ThemeProvider'
 import { Toaster } from '@/components/ui/toaster'
+import type { Metadata } from 'next'
+import { Kumbh_Sans } from 'next/font/google'
+import './globals.css'
 
 const kumbh_sans = Kumbh_Sans({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
 			<body className={kumbh_sans.className}>
 				<ThemeProvider enableSystem={true} attribute='class'>
 					<div className='min-h-screen bg-lightGrey transition-all duration-500 dark:bg-midnight'>
+						<Header />
 						{children}
 						<Toaster />
 					</div>

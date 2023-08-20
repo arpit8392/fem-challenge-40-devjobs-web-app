@@ -23,3 +23,9 @@ interface Role {
 	content: string
 	items: string[]
 }
+
+interface Filter {
+	term?: string
+	location?: string
+	isFullTime: boolean
+}
