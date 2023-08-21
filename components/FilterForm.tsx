@@ -4,7 +4,6 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import queryString from 'query-string'
 import * as z from 'zod'
 
-import { Button } from '@/components/ui/button'
 import {
 	Dialog,
 	DialogContent,
@@ -30,9 +29,13 @@ import { Separator } from '@/components/ui/separator'
 import LocationIcon from '@/public/assets/desktop/icon-location.svg'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
+import { useRef } from 'react'
+import { Button } from './ui/button'
 
 const FilterForm = () => {
 	const router = useRouter()
+	const formRef = useRef(null)
+
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
 		defaultValues: {
@@ -43,14 +46,20 @@ const FilterForm = () => {
 	})
 
 	const onSubmit = (values: z.infer<typeof formSchema>) => {
-		const url = queryString.stringifyUrl({
-			url: '/jobs',
-			query: {
-				term: values.term,
-				location: values.location,
-				isFullTime: values.role,
+		const url = queryString.stringifyUrl(
+			{
+				url: '/jobs',
+				query: {
+					term: values.term,
+					location: values.location,
+					isFullTime: values.role,
+				},
 			},
-		})
+			{
+				skipEmptyString: true,
+				skipNull: true,
+			}
+		)
 
 		form.reset()
 		router.push(url)
@@ -60,6 +69,7 @@ const FilterForm = () => {
 		<Form {...form}>
 			<form
 				onSubmit={form.handleSubmit(onSubmit)}
+				ref={formRef}
 				className='mx-6 flex items-center gap-6 rounded-md bg-white py-4 pl-6 pr-4 dark:bg-veryDarkBlue'>
 				<FormField
 					control={form.control}

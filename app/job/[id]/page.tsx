@@ -7,8 +7,6 @@ type Props = {
 	}
 }
 
-// TODO: Add Error Handling in case of non-existent job is added
-
 const fetchJobFromID = (id: string) => {
 	const job = jobData.find((item) => item.id === Number(id))
 	if (!job) return
