@@ -1,6 +1,6 @@
+import ThemeSwitcher from '@/components/ThemeSwitcher'
 import Logo from '@/public/assets/desktop/logo.svg'
 import Image from 'next/image'
-import ThemeSwitcher from './ThemeSwitcher'
 import Link from 'next/link'
 
 const Header = () => {

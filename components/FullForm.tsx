@@ -1,13 +1,13 @@
 'use client'
 
-type Props = {}
-
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 
+import RoleInputField from '@/components/RoleInputField'
 import { Button } from '@/components/ui/button'
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import { Separator } from '@/components/ui/separator'
 import { formSchema } from '@/constants'
 import LocationIcon from '@/public/assets/desktop/icon-location.svg'
 import { Search } from 'lucide-react'
@@ -15,8 +15,6 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import queryString from 'query-string'
 import { useForm } from 'react-hook-form'
-import RoleInputField from './RoleInputField'
-import { Separator } from './ui/separator'
 
 const FullForm = () => {
 	const router = useRouter()

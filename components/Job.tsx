@@ -1,7 +1,6 @@
-import Image from 'next/image'
+import CompanyLogo from '@/components/CompanyLogo'
+import ContractMetaData from '@/components/ContractMetaData'
 import Link from 'next/link'
-import CompanyLogo from './CompanyLogo'
-import ContractMetaData from './ContractMetaData'
 
 const Job = ({
 	id,

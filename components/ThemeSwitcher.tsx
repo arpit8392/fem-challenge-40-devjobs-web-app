@@ -4,13 +4,13 @@ import { Switch } from '@headlessui/react'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
-import SunIcon from '@/public/assets/desktop/icon-sun.svg'
 import MoonIcon from '@/public/assets/desktop/icon-moon.svg'
+import SunIcon from '@/public/assets/desktop/icon-sun.svg'
 import Image from 'next/image'
 
 export default function ThemeSwitcher() {
 	const { systemTheme, theme, setTheme } = useTheme()
-	const [mounted, setMounted] = useState(false)
+	const [ mounted, setMounted ] = useState(false)
 
 	useEffect(() => {
 		setMounted(true)

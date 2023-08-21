@@ -1,8 +1,8 @@
 'use client'
 
+import Job from '@/components/Job'
+import { Button } from '@/components/ui/button'
 import { useState } from 'react'
-import Job from './Job'
-import { Button } from './ui/button'
 
 type Props = {
 	data: Job[]

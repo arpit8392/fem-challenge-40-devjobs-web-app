@@ -1,12 +1,12 @@
-import Link from 'next/link'
-import CompanyLogo from './CompanyLogo'
-import ContractMetaData from './ContractMetaData'
-import Description from './Description'
-import Requirements from './Requirements'
-import Role from './Role'
+import CompanyLogo from '@/components/CompanyLogo'
+import ContractMetaData from '@/components/ContractMetaData'
+import Description from '@/components/Description'
+import Requirements from '@/components/Requirements'
+import Role from '@/components/Role'
+import { Button } from '@/components/ui/button'
 import Image from 'next/image'
+import Link from 'next/link'
 import { CSSProperties } from 'react'
-import { Button } from './ui/button'
 
 type Props = {
 	data: Job | undefined
