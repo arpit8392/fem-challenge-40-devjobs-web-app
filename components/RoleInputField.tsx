@@ -14,6 +14,8 @@ const RoleInputField = ({ checked, onCheckedChange }: RoleInputProps) => {
 				<Checkbox
 					checked={checked}
 					onCheckedChange={onCheckedChange}
+					aria-label='Full Time Only'
+					role='button'
 					className='h-6 w-6 shrink-0 rounded-[3px] border-none bg-veryDarkBlue/10 hover:bg-violet/25 focus-visible:ring-0 data-[state=checked]:bg-violet data-[state=checked]:text-white dark:bg-white/10 data-[state=checked]:dark:bg-violet data-[state=checked]:dark:text-white'
 				/>
 			</FormControl>
