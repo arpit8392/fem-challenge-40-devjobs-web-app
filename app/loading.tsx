@@ -1,3 +1,5 @@
+// TODO: Add Loading Skeleton Loader - total 3 Skeletons
+
 const Loading = () => {
 	return (
 		<div className='flex min-h-screen items-center justify-center'>

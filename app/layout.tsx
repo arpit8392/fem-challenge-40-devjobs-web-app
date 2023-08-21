@@ -1,6 +1,5 @@
 import Header from '@/components/Header'
 import ThemeProvider from '@/components/ThemeProvider'
-import { Toaster } from '@/components/ui/toaster'
 import type { Metadata } from 'next'
 import { Kumbh_Sans } from 'next/font/google'
 import './globals.css'
@@ -25,7 +24,6 @@ export default function RootLayout({
 					<div className='min-h-screen bg-lightGrey transition-all duration-500 dark:bg-midnight'>
 						<Header />
 						{children}
-						<Toaster />
 					</div>
 				</ThemeProvider>
 			</body>

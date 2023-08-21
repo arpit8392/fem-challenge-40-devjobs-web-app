@@ -1,6 +1,6 @@
-import FilterForm from '@/components/FilterForm'
-import Header from '@/components/Header'
+import FullForm from '@/components/FullForm'
 import JobsList from '@/components/JobsList'
+import MobileForm from '@/components/MobileForm'
 import jobsData from '@/data.json'
 import { getJobsByFilters } from '@/lib/utils'
 
@@ -22,15 +22,18 @@ export default function Jobs({ searchParams }: Props) {
 
 	return (
 		<main>
-			<div className='-mt-10'>
-				<FilterForm />
+			<div className='mx-6 -mt-10 md:mx-10 lg:mx-40'>
+				<div className='block md:hidden'>
+					<MobileForm />
+				</div>
+				<div className='hidden md:block'>
+					<FullForm />
+				</div>
 			</div>
 			{jobs.length ? (
 				<JobsList data={jobs} />
 			) : (
-				<p className='text-2xl font-bold text-center py-10'>
-					No jobs found!
-				</p>
+				<p className='py-10 text-center text-2xl font-bold'>No jobs found!</p>
 			)}
 		</main>
 	)
